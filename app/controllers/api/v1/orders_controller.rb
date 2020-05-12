@@ -30,7 +30,7 @@ module Api
       def ship
         @order = Order.find(params[:id])
 
-        @order.update(status: 'Shipped')
+        @order.update!(status: 'Shipped')
 
         render json: @order
       end
